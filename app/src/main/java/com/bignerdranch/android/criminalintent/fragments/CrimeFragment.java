@@ -1,4 +1,4 @@
-package com.bignerdranch.android.criminalintent;
+package com.bignerdranch.android.criminalintent.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +13,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 
-import com.bignerdranch.android.criminalintent.dto.Crime;
+import com.bignerdranch.android.criminalintent.R;
+import com.bignerdranch.android.criminalintent.model.dto.Crime;
 
 /**
  * Created by knowaknet on 23.04.2018.

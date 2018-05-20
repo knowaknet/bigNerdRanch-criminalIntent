@@ -21,8 +21,8 @@ import com.bignerdranch.android.criminalintent.dto.Crime;
 
 public class CrimeFragment extends Fragment {
     private Crime mCrime;
-    private EditText mCrimeTitle;
-    private Button mCrimeDate;
+    private EditText mCrimeTitleET;
+    private Button mCrimeDateBtn;
     private CheckBox mSolvedCheckBox;
 
     @Override
@@ -42,8 +42,8 @@ public class CrimeFragment extends Fragment {
     }
 
     private void setupUI(View v) {
-        mCrimeTitle =  v.findViewById(R.id.crime_title);
-        mCrimeTitle.addTextChangedListener(new TextWatcher() {
+        mCrimeTitleET =  v.findViewById(R.id.crime_title);
+        mCrimeTitleET.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 // nothing to do
@@ -60,9 +60,9 @@ public class CrimeFragment extends Fragment {
             }
         });
 
-        mCrimeDate = v.findViewById(R.id.crime_date);
-        mCrimeDate.setText(mCrime.getDate().toString());
-        mCrimeDate.setEnabled(false);
+        mCrimeDateBtn = v.findViewById(R.id.crime_date);
+        mCrimeDateBtn.setText(mCrime.getDate().toString());
+        mCrimeDateBtn.setEnabled(false);
 
         mSolvedCheckBox = v.findViewById(R.id.crime_solved);
         mSolvedCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
